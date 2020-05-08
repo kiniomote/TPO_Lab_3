@@ -1,0 +1,58 @@
+{
+  "id": "7efef05f-b776-4469-acdd-0c07857959e7",
+  "version": "2.0",
+  "name": "Lab_3_selenium",
+  "url": "https://en.wikipedia.org/wiki/Unit_testing",
+  "tests": [{
+    "id": "f3f9c54d-496f-431b-a510-3177a5a9ef5d",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "9ad9b7dd-5e7e-48f0-b2c5-e08a69388204",
+    "name": "Check_russian_language_NUnit",
+    "commands": [{
+      "id": "0c3da39c-f033-4734-a426-d0e0894ec2b6",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c1a56d5-3d4a-48d8-8539-d94aa61285c2",
+      "comment": "search NUnit",
+      "command": "sendKeys",
+      "target": "id=searchInput",
+      "targets": [],
+      "value": "NUnit"
+    }, {
+      "id": "31e77f09-cfde-4b9c-8022-4de63cf4ca59",
+      "comment": "ENTER",
+      "command": "sendKeys",
+      "target": "id=searchInput",
+      "targets": [],
+      "value": " ${KEY_ENTER}"
+    }, {
+      "id": "1faa57d1-8ca7-48de-a793-b5c0b4f99136",
+      "comment": "check russian language",
+      "command": "assertText",
+      "target": "css=.interwiki-ru",
+      "targets": [
+        ["css=.interwiki-ru", "css:finder"],
+        ["xpath=//div[@id='p-lang']/div/ul/li[6]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[6]/div/ul/li[6]", "xpath:position"],
+        ["xpath=//li[contains(.,'Русский')]", "xpath:innerText"]
+      ],
+      "value": "Русский"
+    }]
+  }],
+  "suites": [{
+    "id": "46e4d931-6fb6-4e4d-b93a-759a2104787e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f3f9c54d-496f-431b-a510-3177a5a9ef5d"]
+  }],
+  "urls": ["https://en.wikipedia.org/wiki/Main_Page", "https://www.google.com/", "https://en.wikipedia.org/wiki/Unit_testing"],
+  "plugins": []
+}
